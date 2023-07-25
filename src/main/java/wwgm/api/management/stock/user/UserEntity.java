@@ -6,14 +6,18 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
+import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.Setter;
 
-@Entity
-@Table(name = "user")
 @Getter
 @Setter
+@Entity
+@Table(name = "user")
 public class UserEntity {
+	private static final long serialVersionUID = 1L;
+
+    @EqualsAndHashCode.Include
 	@Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -26,6 +30,5 @@ public class UserEntity {
     
     @Column(name = "is_work")
     private boolean isWork;
-    
-    
+        
 }

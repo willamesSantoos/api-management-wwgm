@@ -6,15 +6,19 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
+import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.Setter;
 
 
-@Entity
-@Table(name = "product")
 @Getter
 @Setter
+@Entity
+@Table(name = "product")
 public class ProductEntity {
+	private static final long serialVersionUID = 1L;
+
+    @EqualsAndHashCode.Include
 	@Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;

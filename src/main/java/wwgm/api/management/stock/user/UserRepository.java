@@ -1,8 +1,9 @@
 package wwgm.api.management.stock.user;
 
-import wwgm.api.management.stock.product.ProductEntity;
-import wwgm.api.management.stock.repository.CrudRepository;
+import org.springframework.data.jpa.repository.JpaRepository;
 
-public interface UserRepository extends CrudRepository<ProductEntity, Long> {
+import wwgm.api.management.stock.product.ProductEntity;
+
+public interface UserRepository extends JpaRepository<ProductEntity, Long> {
 
 }
