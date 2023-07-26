@@ -15,11 +15,9 @@ import lombok.Setter;
 @Entity
 @Table(name = "user")
 public class UserEntity {
-	private static final long serialVersionUID = 1L;
 
     @EqualsAndHashCode.Include
-	@Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 	
 	@Column
