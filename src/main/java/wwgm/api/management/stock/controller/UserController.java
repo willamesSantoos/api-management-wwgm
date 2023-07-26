@@ -5,14 +5,14 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import wwgm.api.management.stock.user.UserRepository;
+import wwgm.api.management.stock.user.UserService;
 
 @RestController
 @RequestMapping("/api/management-stock/v1/user")
 public class UserController {
 
 	@Autowired
-	UserRepository user;
+	UserService service;
 	
 	@GetMapping
 	public void getAll () {
