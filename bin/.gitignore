@@ -31,12 +31,3 @@ build/
 
 ### VS Code ###
 .vscode/
-
-### ECLIPSE IDE ###
-.apt_generated
-.classpath
-.factorypath
-.project
-.settings
-.springBeans
-.sts4-cache
